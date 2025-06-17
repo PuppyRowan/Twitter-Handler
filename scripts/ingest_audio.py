@@ -17,7 +17,7 @@ def ingest_file(
     filepath: str, 
     api_url: str = "http://localhost:8000/submit/audio",
     hint: Optional[str] = None,
-    tone: str = "cruel"
+    tone: str = "auto"
 ) -> dict:
     """
     Upload a single audio file to the API.
@@ -53,7 +53,7 @@ def batch_ingest(
     directory: str, 
     api_url: str = "http://localhost:8000/submit/audio",
     extensions: List[str] = [".wav", ".mp3", ".ogg", ".m4a"],
-    tone: str = "cruel"
+    tone: str = "auto"
 ) -> List[dict]:
     """
     Upload all audio files from a directory.

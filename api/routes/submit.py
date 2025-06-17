@@ -30,7 +30,7 @@ async def submit_audio(
     file: UploadFile,
     background_tasks: BackgroundTasks,
     caption_hint: Optional[str] = Form(None),
-    tone: str = Form("cruel")
+    tone: str = Form("auto")
 ):
     """
     Submit an audio file for processing.
@@ -74,7 +74,7 @@ async def submit_audio(
 @router.post("/text")
 async def submit_text(
     text: str = Form(...),
-    tone: str = Form("cruel")
+    tone: str = Form("auto")
 ):
     """Submit text directly for caption generation and queuing."""
     

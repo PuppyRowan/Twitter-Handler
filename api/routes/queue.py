@@ -25,7 +25,7 @@ mock_queue = [
         transcript="Please use me for your entertainment",
         sound_type="whimper",
         caption="Listen to how pathetic she sounds begging for attention.",
-        tone="cruel",
+        tone="auto",
         status="pending",
         created_at=datetime.now()
     ),

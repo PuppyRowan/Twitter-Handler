@@ -52,12 +52,11 @@ async def sms_webhook(
         )
     
     # Process the incoming message
-    try:
-        # Generate caption from the text
+    try:        # Generate caption from the text
         caption = await caption_service.generate_caption(
             transcript=Body,
             sound_type="sms_entry",
-            tone="cruel"  # Default tone for SMS submissions
+            tone="auto"  # Use auto tone selection for SMS submissions
         )
         
         # TODO: Store in database
